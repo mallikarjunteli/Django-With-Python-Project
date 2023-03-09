@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+{{ data }}
+<h1 align="center">Login Page</h1>
+<form action="logread" method="post">
+    {% csrf_token %}
+    <h2 align="center" style="color:red">{{ data2 }}</h2>
+    <table align="center">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="txtName"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="txtPass"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left">
+                <input type="submit" name="btnsubmit" id="Login"></td>
+            <td align="right"><h6>new user?Register here!</h6><a href="{% url 'register' %}">SignUp</a></td>
+
+        </tr>
+
+</table>
+</form>
+
+
+</body>
+</html>

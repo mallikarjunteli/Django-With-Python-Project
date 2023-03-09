@@ -1,0 +1,29 @@
+{% extends 'navbar//Admin_navbar.html' %}
+{% block content %}
+<h1 align="center">Trainer Details</h1>
+
+    <table class="table table-bordered" border="1" align="center" >
+        <tr>
+        <b><th>Id</th>
+        <th>Trainer_name</th>
+        <th>Trainer_Age</th>
+            <th>Trainer_PhNo</th>
+            <th>Trainer_Email</th>
+        <th>Trainer_City</th>
+        <th>Trainer_Course</th>
+        </tr>
+        {% for i in data3 %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.Tname }}</td>
+                <td>{{ i.Tage }}</td>
+                <td>{{ i.TPhno }}</td>
+                <td>{{ i.Temail }}</td>
+                <td>{{ i.Tcity }}</td>
+                <td>{{ i.Tcourse }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends 'navbar//Admin_navbar.html' %}
+
+{% block content %}
+<h1>Assigned Batch</h1>
+<form action="readdata" method="post">
+    {% csrf_token %}
+<table align="center">
+  <tr>
+      <td>Trainer Name:</td>
+        <td><select name="ddlName">
+        <option selected></option>
+              {% for i in data %}
+                    <option>{{ i.Tname }}</option>
+               {% endfor %}
+        </select></td></tr>
+
+      <tr> <td> Batch No:</td>
+          <td><input type="number" name="numBatch"></td></tr>
+    <tr> <td>Date:</td>
+        <td><input type="date" name="datetime"></td></tr>
+         <tr> <td>Course:</td>
+            <td><select name="ddlcourse">
+              <option selected>{{ data1 }}</option>
+               {% for i in data2 %}
+                    <option>{{ i.course_name }}</option>
+
+               {% endfor %}
+
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" name="btnsubmit" id="submit"></td>
+        </tr>
+
+</table>
+
+</form>
+{% endblock %}
