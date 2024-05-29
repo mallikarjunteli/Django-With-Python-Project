@@ -1,2 +1,2 @@
-# Django With Python Project
-Trainer Management System
+# Trainer Management System
+Python Using  Django Project
